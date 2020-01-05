@@ -1,2 +1,2 @@
-# dc_app
+# Newszilla
 hybrid mobile application project at Grantham University
