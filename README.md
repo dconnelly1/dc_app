@@ -1,2 +1,2 @@
 # Newszilla
-hybrid mobile application project at Grantham University
+Hybrid mobile application project at Grantham University
