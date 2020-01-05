@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Bookmarked</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Using standard DIVs because Ionic card themes-->
+  <ion-grid *ngIf="user.userBookmarks && user.userBookmarks.bookmarks">
+    <ion-row>
+      <ion-col>
+
+        <!-- For every article -->
+        <div *ngFor="let article of user.userBookmarks.bookmarks">
+          <div *ngIf="article.articleImage">
+
+            <!-- Main DIV with the image as a background -->
+            <div class="movie-card" [ngStyle]="{'background-image': 'url(' + article.articleImage + ')'}"
+              (click)="getDetails(article)">
+
+              <!-- Dark overlay for effect -->
+              <div class="movie-card__overlay"></div>
+
+              <div class="movie-card__share">
+   
+              </div>
+
+              <!-- Main card content --> 
+              <div class="movie-card__content">
+                <div class="movie-card__header">
+                  <h1 class="movie-card__title">{{article.articleTitle}}</h1>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

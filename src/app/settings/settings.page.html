@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Show Technology News</ion-label>
+    <ion-toggle [(ngModel)]="currentUser.newsPreference.showTechnologyNews" (ngModelChange)="technologyChanged($event)"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Show Political News</ion-label>
+    <ion-toggle [(ngModel)]="currentUser.newsPreference.showPoliticalNews" (ngModelChange)="politicalChanged($event)"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Show Entertainment News</ion-label>
+    <ion-toggle [(ngModel)]="currentUser.newsPreference.showEntertainmentNews" (ngModelChange)="entertainmentChanged($event)"></ion-toggle>
+  </ion-item>
+
+</ion-content>

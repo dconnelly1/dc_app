@@ -1,0 +1,279 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+/** Ionic CSS Variables **/
+:root {
+
+  /** primary **/
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #3171e0;
+  --ion-color-primary-tint: #4c8dff;
+
+  /** secondary **/
+  --ion-color-secondary: #0cd1e8;
+  --ion-color-secondary-rgb: 12, 209, 232;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #0bb8cc;
+  --ion-color-secondary-tint: #24d6ea;
+
+  /** tertiary **/
+  --ion-color-tertiary: #7044ff;
+  --ion-color-tertiary-rgb: 112, 68, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #633ce0;
+  --ion-color-tertiary-tint: #7e57ff;
+
+  /** success **/
+  --ion-color-success: #10dc60;
+  --ion-color-success-rgb: 16, 220, 96;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #0ec254;
+  --ion-color-success-tint: #28e070;
+
+  /** warning **/
+  --ion-color-warning: #ffce00;
+  --ion-color-warning-rgb: 255, 206, 0;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #e0b500;
+  --ion-color-warning-tint: #ffd31a;
+
+  /** danger **/
+  --ion-color-danger: #f04141;
+  --ion-color-danger-rgb: 245, 61, 61;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d33939;
+  --ion-color-danger-tint: #f25454;
+
+  /** dark **/
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 34, 34;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  /** medium **/
+  --ion-color-medium: #989aa2;
+  --ion-color-medium-rgb: 152, 154, 162;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #86888f;
+  --ion-color-medium-tint: #a2a4ab;
+
+  /** light **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 244, 244;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
+
+$primary-color: #cfd6e1;
+$bg-color:#dce1e5;
+$title-color: #9ac7fa;
+$font-stack-content: 'Montserrat', helvetica, arial, sans-serif;
+$font-stack-header: 'Montserrat', helvetica, arial, sans-serif;
+$secondary-color: #2a9fff;
+
+*,*::before, *::after {
+  box-sizing:inherit;
+}
+
+* {
+  transition: .4s;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: 0;
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.article-card {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width:100%;
+  max-width: 800px;
+  height: 100%;
+  min-height: 650px;
+  display: block;
+  margin: 2vh auto;
+  border-radius: 8px;
+  box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.25);
+  position: relative;
+  @media screen and (max-width: 800px) {
+    width: 95%;
+    max-width: 95%;
+  }
+  @media screen and (max-width: 600px) {
+    background-position:50% 0%;
+    background-size: cover;
+    height: 400px;
+  }
+}
+
+.movie-card {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width:100%;
+  max-width: 800px;
+  height: 100%;
+  min-height: 250px;
+  display: block;
+  margin: 2vh auto;
+  border-radius: 8px;
+  box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.25);
+  position: relative;
+  @media screen and (max-width: 800px) {
+    width: 95%;
+    max-width: 95%;
+  }
+  @media screen and (max-width: 600px) {
+    background-position:50% 0%;
+    background-size: cover;
+    height: 400px;
+  }
+  &__overlay {
+    width:100%;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(to right, rgba(42,159,255,.2) 0%,rgba(33,33,32,1) 60%,rgba(33,33,32,1) 100%);
+    background-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    @media screen and (max-width: 600px) {
+      background: linear-gradient(to bottom, rgba(42,159,255,.2) 0%,rgba(33,33,32,1) 60%,rgba(33,33,32,1) 100%);
+    }
+  }
+  &__share {
+    padding: 1em;
+    display: inline-block;
+    width: 100%;
+    max-width: 130px;
+    @media screen and (max-width: 600px) {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__icon {
+    color: #ffffff;
+    mix-blend-mode: lighten;
+    opacity: .4;
+    background: none;
+    padding: 0;
+    &:hover {
+      opacity:1;
+      mix-blend-mode: lighten;
+    }
+    &:not(:first-of-type) {
+      margin-left: 5px;
+    }
+    i {
+      font-size: 1.2em;
+    }
+  }
+  &__content {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position:relative;
+    float: right;
+    padding: 1em;
+    color: #ffffff;
+    padding-bottom: 1em;
+    h1{
+      font-size: 22px;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 50%;
+    }
+    @media screen and (max-width: 600px) {
+      margin-top: 50%;
+      width: 100%;
+      float: inherit;
+      max-width: 100%;
+      padding: 0 1em 1em;
+      h1{
+        font-size: 18px;
+      }
+    }
+  }
+  &__header {
+    margin-bottom: 2em;
+  }
+  &__title {
+    color: #ffffff;
+    margin-bottom: .25em;
+    opacity: .75;
+  }
+  &__info {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .8em;
+    color: $secondary-color;
+    line-height: 1;
+    margin: 0;
+    font-weight: 700;
+    opacity:.5;
+  }
+  &__desc {
+    font-weight: 300;
+    opacity: .84;
+    margin-bottom: 2em;
+  }
+}
+
+h1,h2,h3 {
+  font-family: $font-stack-header;
+  letter-spacing: 2px;
+  line-height: 1;
+  font-weight: 200;
+}
+
+.btn {
+  padding: .5rem 2rem;
+  background-color: rgba(255,255,255,.4);
+  color: rgba(255,255,255,1);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+}
+
+.btn::before {
+  font-family: 'Material Icons';
+  content:'\e037';
+  vertical-align: middle;
+  font-size: 1.5em;
+  padding-right:.5em;
+}
+
+.btn-outline:hover {
+  border-color: $secondary-color;
+  color: $secondary-color;
+  box-shadow: 0px 1px 8px 0px rgba(245,199,0,.2);
+}
+

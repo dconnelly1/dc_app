@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+            <!-- Main DIV with the image as a background -->
+            <div class="article-card" [ngStyle]="{'background-image': 'url(' + articleImage + ')'}">
+
+              <div class="movie-card__overlay"></div>
+              <div class="movie-card__share">
+                <ion-button (click)="bookmarkArticle()">Bookmark</ion-button>
+              </div>
+
+              <!-- Main card content --> 
+              <div class="movie-card__content">
+
+                <div class="movie-card__header">
+                  <h1 class="movie-card__title">{{articleTitle}}</h1>
+                </div>
+
+                {{ articleContent }}
+
+              </div>
+
+            </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

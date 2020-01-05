@@ -1,0 +1,7 @@
+{
+  "name": "ConnellyApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
